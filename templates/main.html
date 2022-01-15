@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>主界面</title>
+    <link href="/static/css/layui/css/layui.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/static/js/selectionMode.js"></script>
+</head>
+
+
+<body>
+
+    <div class="top">
+        <ul class="layui-nav">
+            </li>
+            <li class="layui-nav-item"><a href=" /methylation/all">甲基化信息</a></li>
+            <li class="layui-nav-item"><a href="/transcriptome/all">转录组信息</a></li>
+            <li class="layui-nav-item"><a href="/case/all">临床信息</a></li>
+            <li class="layui-nav-item"><a href="#">论坛</a></li>
+            <li class="layui-nav-item"><a href="#">下载</a></li>
+            <li class="layui-nav-item">
+                <a href="#">关于我们</a>
+                <ul>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">资助</a></li>
+                </ul>
+        </ul>
+
+    </div>
+
+
+    <div class="search" name="searchForm">
+        <form id="search" action="ssss" method="post" name="search" onchange="myFunction()">
+
+            <img src="../static/pic/zoom.jpg" alt="">
+            <input type="text" name="content" placeholder="Liver cancer search">
+            <input style="height:40px" type="button" class="btn" name="searchButton" value="搜索" onclick="mySubmit()"></input>
+            <p></p>
+
+            <table width=120%>
+                <tr>
+                    <td>
+                        <b>查询类型</b>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="first" value="transcriptome" checked> 转录组信息</label>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="first" value="case"> 临床信息</label>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="first" value="methylation"> 甲基化信息</label>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="first" value="comparison"> 不同分期基因比较</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>查询选项</b>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="type" value="case" id=1 checked> caseID</label>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="type" id=2 value="gene"> single-gene</label>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="type" id=3 value="genes"> multi-gene</label>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+<footer>
+    <p>© 2021 一个平平无奇的组</p>
+</footer>
+
+</html>
